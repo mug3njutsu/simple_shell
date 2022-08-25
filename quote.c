@@ -11,7 +11,7 @@ size_t quote_state_none(const char *str, quote_state_t *state)
 {
 	size_t len = 0;
 
-	while (isspace(*str))
+	while (isspacechar(*str))
 		++str, ++len;
 	if (state && *str)
 		*state = quote_state(*str);
@@ -30,7 +30,7 @@ size_t quote_state_word(const char *str, quote_state_t *state)
 {
 	size_t len = 0;
 
-	while (*str && !isspace(*str) && !isquote(*str))
+	while (*str && !isspacechar(*str) && !isquotechar(*str))
 		++str, ++len;
 	if (state && *str)
 		*state = quote_state(*str);
