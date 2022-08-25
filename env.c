@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * __env - displays env
+  * env - displays env vars
   * @info: args passed
   * Return: int
   */
