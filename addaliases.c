@@ -36,7 +36,7 @@ void __alias_print(alias_t *alias)
 }
 
 /**
- * __alias - create and display aliases
+ * addaliases - create and display aliases
  * @info: shell info
  * Return: status
  */
