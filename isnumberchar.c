@@ -1,18 +1,18 @@
 #include "main.h"
 
 /**
-  * isnumber - check if str consists of digits
+  * isnumberchar - check if str consists of digits
   * @s: *p -> str
   * Return: true || false
   */
 
-bool isnumber(const char *s)
+bool isnumberchar(const char *s)
 {
 	if (s)
 	{
 		while (*s)
 		{
-			if (!isdigit(*s++))
+			if (!isdigitchar(*s++))
 				return (false);
 		}
 		return (true);
