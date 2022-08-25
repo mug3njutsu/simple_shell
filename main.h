@@ -39,15 +39,15 @@ struct builtin
 const struct builtin *get_builtin(const char *name);
 const struct builtin *get_builtins(void);
 
-int __alias(info_t *info);
-int __cd(info_t *info);
-int __env(info_t *info);
-int __exec(info_t *info);
-int __exit(info_t *info);
-int __help(info_t *info);
-int __history(info_t *info);
-int __setenv(info_t *info);
-int __unsetenv(info_t *info);
+int addaliases(info_t *info);
+int changedir(info_t *info);
+int env(info_t *info);
+int exec(info_t *info);
+int exit(info_t *info);
+int help(info_t *info);
+int history(info_t *info);
+int setenv(info_t *info);
+int unsetenv(info_t *info);
 
 /**
  * enum cmdlist_sep_n - numeric values for commmand list separators
