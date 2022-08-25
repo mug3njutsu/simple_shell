@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * __help - show help
+ * help - show help
  * @info: shell info
  * Return: status
  */
 
-int __help(struct info *info)
+int help(struct info *info)
 {
 	const builtin_t *bp = NULL;
 	char * const *args = info->tokens + 1;
