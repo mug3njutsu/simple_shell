@@ -1,5 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
+
 #include <sys/wait.h>
 #include <sys/types.h>
 #include <stdio.h>
@@ -31,4 +32,5 @@ int compareEnv(char *s1, char *s2);
 void execute_proc(char **cmd);
 char **identify_string(char *parameter);
 void controlC(int sig);
+
 #endif
