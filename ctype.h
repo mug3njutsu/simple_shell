@@ -3,13 +3,12 @@
 
 #include "main.h"
 
-bool _isalnum(int c);
-bool _isalpha(int c);
-bool _isdigit(int c);
-bool _isident(int c);
-bool _isspace(int c);
-bool _isquote(int c);
-
-bool _isnumber(const char *s);
+bool isalnumchar(int c);
+bool isalphachar(int c);
+bool isdigitchar(int c);
+bool isidentchar(int c);
+bool isspacechar(int c);
+bool isquotechar(int c);
+bool isnumberchar(const char *s);
 
 #endif
