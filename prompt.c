@@ -1,8 +1,8 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * prompt - run prompt
- **/
+**/
 
 void prompt(void)
 {
@@ -15,7 +15,6 @@ void prompt(void)
 
 		place("$ ");
 		lenbuf = getline(&text, &bufsize, stdin);
-		
 		if (lenbuf == -1)
 			exit(98);
 		if (compareExit(text, "exit") == 0)
@@ -39,9 +38,7 @@ void prompt(void)
 					place(*environ), place("\n"); }
 				environ++; }
 			}
-		
 		child_pid = fork();
-		
 		if (child_pid < 0)
 			perror("Error");
 		if (child_pid == 0)
