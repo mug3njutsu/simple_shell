@@ -1,5 +1,4 @@
-#include "shell.h"
-
+#include "main.h"
 
 /**
  * splitstring - splits str and makes it an [*p] -> words

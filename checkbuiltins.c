@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "main.h"
 
 /**
 * checkbuild - checks if command is in __builtins__
