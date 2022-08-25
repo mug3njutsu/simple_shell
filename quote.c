@@ -57,7 +57,7 @@ size_t quote_state_double(const char *str, quote_state_t *state)
 }
 
 /**
- * _quote_state_single - get state length and next state
+ * quote_state_single - get state length and next state
  * @str: str
  * @state: state
  * Return: len(state)
@@ -75,7 +75,7 @@ size_t quote_state_single(const char *str, quote_state_t *state)
 }
 
 /**
- * _quote_state_escape - get state length and next state
+ * quote_state_escape - get state length and next state
  * @str: str
  * @state: state
  * Return: len(state)
