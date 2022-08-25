@@ -19,34 +19,34 @@ A command-line shell helps us run commands on a unix machine, in this case i was
 This is a simple recreation of the default shell that you'll find on any of the unix operating systems.
 
 > ### Allowed funcs & Syscalls
-*access
-*chdir
-*close
-*closedir
-*execve
-*exit
-*_exit 
-*fflush
-*fork
-*free
-*getcwd
-*getline
-*getpid
-*isatty
-*kill
-*malloc
-*open
-*opendir
-*perror
-*read
-*readdir
-*signal
-*stat 
-*lstat 
-*fstat 
-*strtok
-*wait
-*waitpid
-*wait3
-*wait4
-*write
+* access
+* chdir
+* close
+* closedir
+* execve
+* exit
+* _exit 
+* fflush
+* fork
+* free
+* getcwd
+* getline
+* getpid
+* isatty
+* kill
+* malloc
+* open
+* opendir
+* perror
+* read
+* readdir
+* signal
+* stat 
+* lstat 
+* fstat 
+* strtok
+* wait
+* waitpid
+* wait3
+* wait4
+* write
