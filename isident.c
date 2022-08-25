@@ -10,3 +10,4 @@ bool isident(int c)
 {
 	return (c == '_' || isalnum(c));
 }
+
