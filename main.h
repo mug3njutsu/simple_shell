@@ -21,7 +21,7 @@ typedef dict_t alias_t;
 typedef int (*builtin_fp)(info_t *);
 
 /**
- * struct builtin - __builtins__
+ * struct builtin - builtins
  * @name: command
  * @f: func
  * @help: command usage
@@ -43,7 +43,7 @@ int addaliases(info_t *info);
 int changedir(info_t *info);
 int env(info_t *info);
 int exec(info_t *info);
-int exit(info_t *info);
+int cleanexit(info_t *info);
 int help(info_t *info);
 int history(info_t *info);
 int setenv(info_t *info);
@@ -120,14 +120,13 @@ void free_cmdlist(cmdlist_t **headptr);
 cmdtree_t *cmd_to_tree(const char * const *tokens);
 void free_cmdtree(cmdtree_t **rootptr);
 
-
-bool _isalnum(int c);
-bool _isalpha(int c);
-bool _isdigit(int c);
-bool _isident(int c);
-bool _isspace(int c);
-bool _isquote(int c);
-bool _isnumber(const char *s);
+bool isalnum(int c);
+bool isalpha(int c);
+bool isdigit(int c);
+bool isident(int c);
+bool isspace(int c);
+bool isquote(int c);
+bool isnumber(const char *s);
 
 /**
   * struct dict - singly linked list of key-value pairs
