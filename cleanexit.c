@@ -12,7 +12,7 @@ int cleanexit(info_t *info)
 
 	if (*args)
 	{
-		if (isnumber(*args) && atou(*args) <= INT_MAX)
+		if (isnumberchar(*args) && atou(*args) <= INT_MAX)
 		{
 			info->status = atou(*args);
 		}
