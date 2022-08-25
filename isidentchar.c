@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-  * isident - checks if char is valid
+  * isidentchar - checks if char is valid
   * @c: char
   * Return: 0 || 1
   */
 
-bool isident(int c)
+bool isidentchar(int c)
 {
-	return (c == '_' || isalnum(c));
+	return (c == '_' || isalnumchar(c));
 }
