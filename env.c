@@ -6,7 +6,7 @@
   * Return: int
   */
 
-int __env(info_t *info)
+int env(info_t *info)
 {
 	env_t *var;
 
