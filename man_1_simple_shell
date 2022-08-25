@@ -61,11 +61,11 @@ There is no known bugs at the moment.
 .br
  $ ./hsh
 .br
- #cisfun$ /bin/ls
+ l33tsh3ll$ /bin/ls
 .br
  hsh main.c shell.c
 .br
- #cisfun$ exit
+ l33tsh3ll$ exit
 .br
  $
 .br
