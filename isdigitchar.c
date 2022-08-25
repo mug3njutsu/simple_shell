@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-  * isdigit - checks if char is digit
+  * isdigitchar - checks if char is digit
   * @c: char
   * Return: int
   */
 
-bool isdigit(int c)
+bool isdigitchar(int c)
 {
 	return (c >= '0' && c <= '9');
 }
