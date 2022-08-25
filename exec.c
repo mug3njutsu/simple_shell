@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * __exec - replace the running shell with new program
+ * exec - replace the running shell with new program
  * @info: args passed
  * Return: int
  */
