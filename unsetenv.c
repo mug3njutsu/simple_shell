@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-  * __unsetenv - unsets the env var
+  * unsetenv - unsets the env var
   * @info: args passed
   * Return: status
   */
 
-int __unsetenv(info_t *info)
+int unsetenv(info_t *info)
 {
 	char **args = info->tokens + 1;
 
