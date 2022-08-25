@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * __setenv - sets the env vars
+ * setenv - sets the env vars
  * @info: args passed
  * Return: status
  */
 
-int __setenv(info_t *info)
+int setenv(info_t *info)
 {
 	env_t *var;
 	char **args = info->tokens + 1, *val;
