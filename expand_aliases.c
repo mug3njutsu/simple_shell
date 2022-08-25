@@ -16,7 +16,7 @@ void expand_aliases(alias_t *aliases, char ***tokptr)
 	do {
 		name = expand_alias(aliases, tokptr);
 		value = get_dict_val(aliases, name);
-		if (value && *value && isspace(value[_strlen(value) - 1]))
+		if (value && *value && isspacechar(value[_strlen(value) - 1]))
 		{
 			old = *tokptr;
 			new = arrdup(old + 1);
