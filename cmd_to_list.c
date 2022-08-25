@@ -1,4 +1,4 @@
-#include "command.h"
+#include "main.h"
 
 /**
  * cmd_to_list - construct a linked list of commands
