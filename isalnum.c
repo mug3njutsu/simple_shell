@@ -6,7 +6,7 @@
   * Return: 0 || 1
   */
 
-bool _isalnum(int c)
+bool isalnum(int c)
 {
 	return (isalpha(c) || isdigit(c));
 }
