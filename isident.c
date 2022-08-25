@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * _isident - checks if char is valid
+  * isident - checks if char is valid
   * @c: char
   * Return: 0 || 1
   */
