@@ -85,9 +85,9 @@ char **_expand_vars(info_t *info, char ***tokptr)
 		{
 			val = num_to_str(info->status);
 		}
-		else if (isident(tok[pos + 1]) && !isdigit(tok[pos + 1]))
+		else if (isidentchar(tok[pos + 1]) && !isdigitchar(tok[pos + 1]))
 		{
-			while (isident(tok[pos + var_len + 1]))
+			while (isidentchar(tok[pos + var_len + 1]))
 				++var_len;
 
 			var = _strndup(tok + pos + 1, var_len);
