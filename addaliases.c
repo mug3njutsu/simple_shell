@@ -41,7 +41,7 @@ void __alias_print(alias_t *alias)
  * Return: status
  */
 
-int __alias(info_t *info)
+int addaliases(info_t *info)
 {
 	alias_t *alias;
 	char *name, **args = info->tokens + 1;
