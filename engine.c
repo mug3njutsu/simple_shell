@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * lookforslash - identifies if first char is a slash.
+ * lookforslash - identifies if first char is a slash
  * @cmd: first str
  * Return: 1 || 0
  */
