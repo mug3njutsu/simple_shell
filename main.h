@@ -120,13 +120,13 @@ void free_cmdlist(cmdlist_t **headptr);
 cmdtree_t *cmd_to_tree(const char * const *tokens);
 void free_cmdtree(cmdtree_t **rootptr);
 
-bool isalnum(int c);
-bool isalpha(int c);
-bool isdigit(int c);
-bool isident(int c);
-bool isspace(int c);
-bool isquote(int c);
-bool isnumber(const char *s);
+bool isalnumchar(int c);
+bool isalphachar(int c);
+bool isdigitchar(int c);
+bool isidentchar(int c);
+bool isspacechar(int c);
+bool isquotechar(int c);
+bool isnumberchar(const char *s);
 
 /**
   * struct dict - singly linked list of key-value pairs
@@ -227,7 +227,7 @@ void remove_comments(cmdlist_t *cmd);
 
 void open_script(info_t *info);
 
-void _sigint(int signal);
+void sigint(int signal);
 
 extern char **environ;
 
@@ -321,13 +321,13 @@ quote_state_t quote_state(char c);
 quote_state_fp quote_state_f(quote_state_t s);
 
 size_t quote_state_len(const char *str, quote_state_t state);
-size_t _quote_state_none(const char *str, quote_state_t *state);
-size_t _quote_state_word(const char *str, quote_state_t *state);
-size_t _quote_state_double(const char *str, quote_state_t *state);
-size_t _quote_state_single(const char *str, quote_state_t *state);
-size_t _quote_state_escape(const char *str, quote_state_t *state);
+size_t quote_state_none(const char *str, quote_state_t *state);
+size_t quote_state_word(const char *str, quote_state_t *state);
+size_t quote_state_double(const char *str, quote_state_t *state);
+size_t quote_state_single(const char *str, quote_state_t *state);
+size_t quote_state_escape(const char *str, quote_state_t *state);
 
-int _isspecial_double(char c);
+int isspecial_double(char c);
 
 char *dequote(const char *str);
 size_t dequote_len(const char *str);
