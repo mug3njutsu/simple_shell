@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * lookforslash - identifies if first char is a slash
+ * lookforslash - checks if char[0] is a slash
  * @cmd: first str
  * Return: 1 || 0
  */
@@ -25,8 +25,8 @@ int lookforslash(char *cmd)
 }
 
 /**
- * compareExit - identifies if first char is a slash.
- * @s1: first st
+ * compareExit - checks if char[0] is a slash
+ * @s1: first str
  * @s2: exit str
  * Return: 1 || 0
  */
@@ -47,7 +47,7 @@ int compareExit(char *s1, char *s2)
 }
 
 /**
- * compareEnv - identifies if first char is a slash.
+ * compareEnv - checks if char[0] is a slash
  * @s1: first str
  * @s2: exit str
  * Return: 1 || 0
@@ -69,7 +69,7 @@ int compareEnv(char *s1, char *s2)
 }
 
 /**
- * identify_string - identify keyboard input.
+ * identify_string - reads in keyboard input
  * @parameter: call prompt from another func
  * Return: str
  **/
