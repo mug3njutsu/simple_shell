@@ -36,7 +36,7 @@ size_t _quote_state_double(const char *str, quote_state_t *state);
 size_t _quote_state_single(const char *str, quote_state_t *state);
 size_t _quote_state_escape(const char *str, quote_state_t *state);
 
-int _isspecial_double(char c);
+int isspecial_double(char c);
 
 char *dequote(const char *str);
 size_t dequote_len(const char *str);
