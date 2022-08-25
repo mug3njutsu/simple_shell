@@ -14,4 +14,4 @@
 #include <errno.h>
 #include <fcntl.h>
 
-#endif MAIN_H
+#endif
