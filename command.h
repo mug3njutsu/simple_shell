@@ -14,6 +14,7 @@
  * @AND: &&
  * @OR: ||
  */
+
 typedef enum cmdlist_sep_n
 {
 	SEMICOLON = 1,
@@ -27,6 +28,7 @@ typedef enum cmdlist_sep_n
  * @sep: the command separator
  * @n: the corresponding numeric value
  */
+
 typedef struct cmdlist_sep
 {
 	const char *sep;
@@ -39,6 +41,7 @@ typedef struct cmdlist_sep
  * @tree: a binary tree of commands
  * @tokens: the tokens for each command in the tree
  */
+
 struct cmdlist
 {
 	struct cmdlist *next;
@@ -53,6 +56,7 @@ struct cmdlist
  * @tokens: a simple command with no separators
  * @sep: the preceding list separator
  */
+
 struct cmdtree
 {
 	struct cmdtree *success;
@@ -74,4 +78,4 @@ void free_cmdlist(cmdlist_t **headptr);
 cmdtree_t *cmd_to_tree(const char * const *tokens);
 void free_cmdtree(cmdtree_t **rootptr);
 
-#endif /* _COMMAND_H_ */
+#endif
