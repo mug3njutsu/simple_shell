@@ -35,7 +35,6 @@ info_t *init_info(int argc, char **argv)
 	return (&info);
 }
 
-
 /**
  * free_info - free and nullify dynamically allocated info
  * @info: pointer to the info
