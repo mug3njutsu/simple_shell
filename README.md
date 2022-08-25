@@ -1,5 +1,5 @@
 # Creation of a simple command-line shell
-![Printf-meme-you-can-never-be-too-serious]https://memegenerator.net/img/instances/54695180/due-to-having-a-windows-command-shell-nothing-to-bash-about.jpg)
+![Spamming the command-line :P](https://www.thatcompany.com/wp-content/uploads/2019/12/power.jpg)
 
 > ## Swiss Army Knife
 This project was coded on a `Debian 5.18.5-1kali6 x86_64 GNU/Linux` and compiled with `gcc Debian 11.3.0-5) 11.3.0.`
