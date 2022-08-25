@@ -11,7 +11,17 @@ gcc -Wall -pedantic -Werror Wextra *.c -o hsh
 ```
 It's safe to run commands now :)
 ```bash
-
+➜  simple_shell git:(main) ./hsh 
+l33tsh3ll$ whoami
+mug3njutsu
+l33tsh3ll$ ls
+__builtins__.c   cleanexit.c  hsh     man_1_simple_shell  README.md
+checkbuiltins.c  exec.c       main.h  pathlinkage.c       string.c
+l33tsh3ll$ ls /var
+backups  cache  lib  local  lock  log  mail  opt  run  spool  tmp  www
+l33tsh3ll$ echo "3l33t"
+"3l33t"
+l33tsh3ll$ 
 ```
 
 > ### Description
