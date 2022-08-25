@@ -32,7 +32,7 @@ void __cd_success(info_t *info)
 	setenv_tokens[1] = "OLDPWD";
 	setenv_tokens[2] = info->cwd;
 
-	__setenv(info);
+	setenv(info);
 
 	free(info->cwd);
 	info->cwd = getcwd(NULL, 0);
@@ -40,19 +40,19 @@ void __cd_success(info_t *info)
 	setenv_tokens[1] = "PWD";
 	setenv_tokens[2] = info->cwd;
 
-	__setenv(info);
+	setenv(info);
 
 	info->tokens = tokens;
 	info->status = EXIT_SUCCESS;
 }
 
 /**
- * __cd - changes dir
+ * changedir - changes dir
  * @info: args passed
  * Return: int
  */
 
-int __cd(info_t *info)
+int changedir(info_t *info)
 {
 	char *dir = NULL, **args = info->tokens + 1;
 
