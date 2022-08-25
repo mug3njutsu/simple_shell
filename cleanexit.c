@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-  * __exit - exits from shell
-  * @info: arguments passed
+  * cleanexit - exits cleanly from shell
+  * @info: args passed
   * Return: int
   */
 
@@ -12,7 +12,7 @@ int cleanexit(info_t *info)
 
 	if (*args)
 	{
-		if (_isnumber(*args) && atou(*args) <= INT_MAX)
+		if (isnumber(*args) && atou(*args) <= INT_MAX)
 		{
 			info->status = atou(*args);
 		}
