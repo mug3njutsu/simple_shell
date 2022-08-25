@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
-  * isalnum - checks if char is alphanumeric
+  * isalnumchar - checks if char is alphanumeric
   * @c: char
   * Return: 0 || 1
   */
 
-bool isalnum(int c)
+bool isalnumchar(int c)
 {
-	return (isalpha(c) || isdigit(c));
+	return (isalphachar(c) || isdigitchar(c));
 }
