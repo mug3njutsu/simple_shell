@@ -3,6 +3,7 @@
 /**
   * execute - exec command
   * @info: args passed
+  * Return: NULL
   */
 
 int execute(info_t *info)
