@@ -3,11 +3,11 @@
 /**
  * _memchr - get the index of the first matching value
  * @src: start of the memory area to search
- * @chr: value to find
- * @n: size of the search area
- * Return: If chr does not occur in the first n elements of src, return -1.
- * Otherwise, return the index of the first occurence of chr.
+ * @chr: val to find
+ * @n: sizeof(search area)
+ * Return: -1 || index of the first occurrence of char
  */
+
 ssize_t _memchr(const void *src, unsigned char chr, size_t n)
 {
 	const unsigned char *mem = src;
@@ -27,15 +27,12 @@ ssize_t _memchr(const void *src, unsigned char chr, size_t n)
 
 /**
  * _memcpy - copy a memory area
- * @dest: a pointer to the start of the target area
- * @src: a pointer to the start of the source area
- * @n: the number of bytes to copy
- *
- * Description: This function copies n bytes from the memory area at src
- * to the memory area at dest. These memory areas must not overlap.
- *
- * Return: a pointer to dest
+ * @dest: *p -> start of the target area
+ * @src: *p -> start of the src area
+ * @n: n bytes to copy
+ * Return: *p -> dest
  */
+
 void *_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char *w_pos = dest;
@@ -51,11 +48,11 @@ void *_memcpy(void *dest, const void *src, size_t n)
 
 /**
  * _memdup - duplicate a memory area
- * @src: a pointer to the start of the source area
- * @n: the number of bytes to duplicate
- * Return: If memory allocation fails, return NULL. Otherwise, return a
- * pointer to the start of the duplicated memory.
+ * @src: *p -> start of the src area
+ * @n: n bytes to duplicate
+ * Return: NULL || *p -> start of the duplicated memory
  */
+
 void *_memdup(const void *src, size_t n)
 {
 	void *dup = malloc(n);
@@ -71,12 +68,13 @@ void *_memdup(const void *src, size_t n)
 }
 
 /**
- * _memset - fill a region of memory with a given value
- * @dest: pointer to the beginning of the region
- * @chr: value to write to the region
- * @n: number of bytes to write
+ * _memset - fill a region of memory with a given val
+ * @dest: *p -> beginning of the region
+ * @chr: val to write to the region
+ * @n: n bytes to write
  * Return: dest
  */
+
 void *_memset(void *dest, unsigned char chr, size_t n)
 {
 	unsigned char *mem = dest;
