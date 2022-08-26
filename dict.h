@@ -1,8 +1,7 @@
 #ifndef _DICT_H_
 #define _DICT_H_
 
-#include <stdlib.h>
-
+#include "main.h"
 #include "string.h"
 #include "types.h"
 
