@@ -1,10 +1,11 @@
 #include "env.h"
 
 /**
-  * dict_to_env - creates linked list from environment
-  * @head: argument passed
-  * Return: pointer to list
+  * dict_to_env - creates linked list from env
+  * @head: arg passed
+  * Return: *p -> list
   */
+
 char **dict_to_env(env_t *head)
 {
 	env_t *tmp = head;
