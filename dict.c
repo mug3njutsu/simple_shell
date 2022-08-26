@@ -1,12 +1,12 @@
 #include "dict.h"
 
 /**
-  * get_dict_val - get a value from a dictionary
+  * get_dict_val - get val from a dictionary
   * @head: dict
   * @key: entry key
-  *
-  * Return: pointer to the entry value
+  * Return: *p -> entry value
   */
+
 char *get_dict_val(dict_t *head, const char *key)
 {
 	if (!key)
@@ -22,14 +22,13 @@ char *get_dict_val(dict_t *head, const char *key)
 	return (NULL);
 }
 
-
 /**
   * get_dict_node - retrieve a node by key
   * @head: dict
   * @key: entry key
-  *
-  * Return: node or NULL
+  * Return: NULL || node
   */
+
 dict_t *get_dict_node(dict_t *head, const char *key)
 {
 	if (!head)
@@ -39,14 +38,14 @@ dict_t *get_dict_node(dict_t *head, const char *key)
 	return (get_dict_node(head->next, key));
 }
 
-
 /**
   * add_dict_node_end - adds node at the end of list
-  * @headptr: pointer to dict
+  * @headptr: *p -> dict
   * @key: entry key
   * @val: entry val
-  * Return: pointer to list
+  * Return: *p -> list
   */
+
 dict_t *add_dict_node_end(dict_t **headptr, const char *key, const char *val)
 {
 	dict_t *new;
@@ -69,14 +68,13 @@ dict_t *add_dict_node_end(dict_t **headptr, const char *key, const char *val)
 	return (new);
 }
 
-
 /**
-  * del_dict_node - delete a node
-  * @headptr: pointer to dict
+  * del_dict_node - delete node
+  * @headptr: *p -> dict
   * @key: entry key
-  *
-  * Return: pointer to resulting list
+  * Return: *p -> resulting list
   */
+
 dict_t *del_dict_node(dict_t **headptr, const char *key)
 {
 	dict_t *tmp;
@@ -96,11 +94,11 @@ dict_t *del_dict_node(dict_t **headptr, const char *key)
 	return (*headptr);
 }
 
-
 /**
- * free_dict - free a linked list and and set head to NULL
- * @headptr: the first list node
+ * free_dict - free a linked list and set head to NULL
+ * @headptr: first list node
  */
+
 void free_dict(dict_t **headptr)
 {
 	if (!*headptr)
