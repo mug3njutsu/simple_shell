@@ -2,11 +2,11 @@
 
 /**
  * main - entry point
- * @argc: the argument count
- * @argv: the argument vector
- *
- * Return: Always 0
+ * @argc: arg count
+ * @argv: arg vector
+ * Return: Always 0 -> (Success)
  */
+
 int main(int argc, char **argv)
 {
 	info_t *info = init_info(argc, argv);
