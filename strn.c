@@ -1,12 +1,13 @@
 #include "string.h"
 
 /**
-  * _strnchr - get the index of the first matching character
-  * @str: string passed
-  * @chr: character passed
-  * @n: max number of characters to check
+  * _strnchr - get the index of the first matching char
+  * @str: str passed
+  * @chr: char passed
+  * @n: max number of chars to check
   * Return: Index of the first occurence, or -1 chr is not found
   */
+
 ssize_t _strnchr(const char *str, char chr, size_t n)
 {
 	ssize_t index;
@@ -23,18 +24,13 @@ ssize_t _strnchr(const char *str, char chr, size_t n)
 	return (-1);
 }
 
-
 /**
- * _strndup - duplicate the given string
- * @str: the string to duplicate
- * @n: the max number of bytes to copy
- *
- * Description: This function copies at most n bytes. If str is longer
- * than n, only n bytes are copied, and a terminating null byte is added.
- *
- * Return: If str is NULL or if memory allocation fails, return NULL.
- * Otherwise a return a pointer to the dynamically-allocated duplicate.
+ * _strndup - duplicate the given str
+ * @str: str to duplicate
+ * @n: n bytes to copy
+ * Return: NULL || * p -> dynamically-allocated duplicate.
  */
+
 char *_strndup(const char *str, size_t n)
 {
 	char *dup;
@@ -58,13 +54,13 @@ char *_strndup(const char *str, size_t n)
 	return (dup);
 }
 
-
 /**
- * _strnlen - calculate the length of a string
- * @str: the string to measure
- * @n: the max number of characters to check
- * Return: the lesser of n and the length of the string
+ * _strnlen - calculate the len(str)
+ * @str: str to measure
+ * @n: max number of chars to check
+ * Return: < n & the len(str)
  */
+
 ssize_t _strnlen(const char *str, size_t n)
 {
 	const char *pos = str;
@@ -78,17 +74,14 @@ ssize_t _strnlen(const char *str, size_t n)
 	return (pos - str);
 }
 
-
-
 /**
- * _strncmp - compare two strings
- * @s1: a string to compare
- * @s2: the other string to compare
- * @n: the max number of bytes to compare
- * Return: 0 if s1 matches s2,
- * otherwise an integer less than 0 if s1 is less than s2,
- * otherwise an integer greater than 0 if s1 is greater than s2.
+ * _strncmp - compare two strs
+ * @s1: a str to compare
+ * @s2: other str to compare
+ * @n: max number of bytes to compare
+ * Return: << 0 >>
  */
+
 int _strncmp(const char *s1, const char *s2, size_t n)
 {
 	for (; n && *s1 && *s2; --n, ++s1, ++s2)
@@ -108,17 +101,12 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-
 /**
- * _strncpy - copy the string
- * @dest: destination
- * @src: source
- * @n: the max number of bytes to copy
- *
- * Description: This function copies at most n bytes from src to dest. A
- * null byte will NOT be written if not found in the first n bytes
- *
- * Return: a pointer to dest
+ * _strncpy - copy str
+ * @dest: dest
+ * @src: src
+ * @n: max number of bytes to copy
+ * Return: *p -> dest
  */
 
 char *_strncpy(char *dest, const char *src, size_t n)
