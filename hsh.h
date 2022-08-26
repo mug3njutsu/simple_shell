@@ -1,15 +1,7 @@
 #ifndef SHELL_H
 #define SHELL_H
 
-#include <stdbool.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <sys/wait.h>
-#include <sys/stat.h>
-#include <signal.h>
-#include <errno.h>
-#include <fcntl.h>
-
+#include "main.h"
 #include "alias.h"
 #include "builtins.h"
 #include "command.h"
@@ -47,4 +39,4 @@ void open_script(info_t *info);
 
 void _sigint(int signal);
 
-#endif /* SHELL_H */
+#endif
