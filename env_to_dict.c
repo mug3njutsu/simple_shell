@@ -1,10 +1,11 @@
 #include "env.h"
 
 /**
-  * env_to_dict - creates a list from environment
-  * @env: environment passed
+  * env_to_dict - creates a list from env
+  * @env: env passed
   * Return: head
   */
+
 env_t *env_to_dict(char **env)
 {
 	env_t *head = NULL;
@@ -15,14 +16,13 @@ env_t *env_to_dict(char **env)
 	return (head);
 }
 
-
 /**
- * _env_to_dict - turn the environment into a linked list (helper)
- * @tailptr: pointer to the tail of the list
- * @env: environment
- *
- * Return: pointer to the tail of the list
+ * _env_to_dict - turn the env into a linked list
+ * @tailptr: *p -> tail of the list
+ * @env: env
+ * Return: *p -> tail of the list
  */
+
 env_t *_env_to_dict(env_t **tailptr, char **env)
 {
 	env_t *tail;
