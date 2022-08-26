@@ -1,11 +1,11 @@
 #include "quote.h"
 
 /**
- * quote_state - get the state associated with a given character
- * @c: character
- *
+ * quote_state - get the state associated with a given char
+ * @c: char
  * Return: the state associated with c
  */
+
 quote_state_t quote_state(char c)
 {
 	if (_isspace(c))
@@ -19,13 +19,12 @@ quote_state_t quote_state(char c)
 	return (QUOTE_WORD);
 }
 
-
 /**
- * quote_state_f - get the function associated with a given state
+ * quote_state_f - get the func associated with a given state
  * @s: state
- *
  * Return: the state associated with c
  */
+
 quote_state_fp quote_state_f(quote_state_t s)
 {
 	switch (s)
@@ -44,14 +43,13 @@ quote_state_fp quote_state_f(quote_state_t s)
 	return (NULL);
 }
 
-
 /**
- * quote_state_len - get the length of a given state
- * @str: string
+ * quote_state_len - get the len(given state)
+ * @str: str
  * @state: state
- *
  * Return: the state associated with c
  */
+
 size_t quote_state_len(const char *str, quote_state_t state)
 {
 	return (quote_state_f(state)(str, NULL));
