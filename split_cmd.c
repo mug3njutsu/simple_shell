@@ -2,10 +2,10 @@
 
 /**
  * split_cmd - split a command with NULL-bytes on unquoted semicolons
- * @cmd: the command to split
- *
+ * @cmd: command to split
  * Return: The total number of commands resulting from the split
  */
+
 size_t split_cmd(char *cmd)
 {
 	size_t count = 1, state_len;
@@ -45,4 +45,3 @@ size_t split_cmd(char *cmd)
 
 	return (count);
 }
-
