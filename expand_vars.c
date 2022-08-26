@@ -1,10 +1,11 @@
 #include "hsh.h"
 
 /**
- * expand_vars - perform variable expansion on the current set of tokens
- * @info: shell information
-  * @tokptr: pointer to the current tokens
+ * expand_vars - perform var expansion on the current set of tokens
+ * @info: shell info
+ * @tokptr: *p -> current tokens
  */
+
 void expand_vars(info_t *info, char ***tokptr)
 {
 	char **new = NULL, **old, **tmp, **tokens;
@@ -22,14 +23,13 @@ void expand_vars(info_t *info, char ***tokptr)
 	*tokptr = new;
 }
 
-
 /**
- * _expand_vars - perform variable expansion on a token
- * @info: shell information
-  * @tokptr: pointer to the current tokens
- *
+ * _expand_vars - perform var expansion on a token
+ * @info: shell info
+ * @tokptr: *p -> current tokens
  * Return: the expanded token
  */
+
 char **_expand_vars(info_t *info, char ***tokptr)
 {
 	char *var = NULL, *val = NULL, *tok = **tokptr;
