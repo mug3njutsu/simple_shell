@@ -1,10 +1,11 @@
 #include "builtins.h"
 
 /**
- * __cd_error - print an error upon failure to change directory
+ * __cd_error - print an error upon failure to change dir
  * @info: shell info
  * @dir: directory
  */
+
 void __cd_error(info_t *info, char *dir)
 {
 	char *error = strjoin(NULL, " ", "can't cd to", dir);
@@ -16,11 +17,11 @@ void __cd_error(info_t *info, char *dir)
 	free(error);
 }
 
-
 /**
- * __cd_success - update the environment upon success
+ * __cd_success - update the env upon success
  * @info: shell info
  */
+
 void __cd_success(info_t *info)
 {
 	char **tokens = info->tokens;
@@ -46,13 +47,12 @@ void __cd_success(info_t *info)
 	info->status = EXIT_SUCCESS;
 }
 
-
 /**
- * __cd - changes the directory
- * @info: arguments passed
- *
+ * __cd - changes the dir
+ * @info: args passed
  * Return: int
  */
+
 int __cd(info_t *info)
 {
 	char *dir = NULL, **args = info->tokens + 1;
