@@ -1,8 +1,7 @@
 #ifndef _QUOTE_H_
 #define _QUOTE_H_
 
-#include <stdlib.h>
-
+#include "main.h"
 #include "ctype.h"
 #include "string.h"
 
@@ -14,6 +13,7 @@
  * @QUOTE_SINGLE: In single quotes
  * @QUOTE_ESCAPE: Following a backslash
  */
+
 typedef enum quote_state
 {
 	QUOTE_NONE   = 0x0,
@@ -41,4 +41,4 @@ int _isspecial_double(char c);
 char *dequote(const char *str);
 size_t dequote_len(const char *str);
 
-#endif /* _QUOTE_H_ */
+#endif
