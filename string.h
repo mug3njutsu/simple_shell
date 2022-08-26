@@ -1,8 +1,7 @@
 #ifndef _STRING_H_
 #define _STRING_H_
 
-#include <stdlib.h>
-#include <stdarg.h>
+#include "main.h"
 
 ssize_t _memchr(const void *src, unsigned char chr, size_t n);
 void *_memcpy(void *dest, const void *src, size_t n);
