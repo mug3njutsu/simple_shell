@@ -1,10 +1,7 @@
 #ifndef _BUILTINS_H_
 #define _BUILTINS_H_
 
-#include <limits.h>
-#include <stdlib.h>
-#include <unistd.h>
-
+#include "main.h"
 #include "alias.h"
 #include "env.h"
 #include "error.h"
