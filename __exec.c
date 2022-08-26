@@ -2,9 +2,10 @@
 
 /**
  * __exec - replace the running shell with a new program
- * @info: arguments passed
+ * @info: args passed
  * Return: int
  */
+
 int __exec(info_t *info)
 {
 	char *exe, **args = info->tokens + 1, **env = NULL;
