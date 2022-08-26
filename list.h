@@ -1,15 +1,16 @@
 #ifndef LIST_H
 #define LIST_H
 
-#include <stdlib.h>
+#include "main.h"
 #include "string.h"
 #include "types.h"
 
 /**
  * struct list - singly linked list
- * @str: dynamically-allocated string
- * @next: pointer to the next node
+ * @str: dynamically-allocated str
+ * @next: *p -> next node
  */
+
 struct list
 {
 	char *str;
@@ -22,4 +23,4 @@ list_t *add_node(list_t **headptr, const char *str);
 list_t *add_node_end(list_t **headptr, const char *str);
 void free_list(list_t **headptr);
 
-#endif /* LIST_H */
+#endif
