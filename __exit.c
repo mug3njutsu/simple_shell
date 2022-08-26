@@ -2,9 +2,10 @@
 
 /**
   * __exit - exits from shell
-  * @info: arguments passed
+  * @info: args passed
   * Return: int
   */
+
 int __exit(info_t *info)
 {
 	char **args = info->tokens + 1;
