@@ -1,10 +1,11 @@
 #include "builtins.h"
 
 /**
-  * __env - displays environment
-  * @info: arguments passed
+  * __env - displays env
+  * @info: args passed
   * Return: int
   */
+
 int __env(info_t *info)
 {
 	env_t *var;
