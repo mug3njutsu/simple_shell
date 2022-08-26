@@ -5,6 +5,7 @@
  * @info: shell info
  * Return: status
  */
+
 int __help(struct info *info)
 {
 	const builtin_t *bp = NULL;
