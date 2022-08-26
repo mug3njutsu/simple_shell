@@ -1,11 +1,11 @@
 #include "tokens.h"
 
 /**
- * arrdup - duplicate a (NULL-terminated) array
- * @arr: the array to duplicate
- *
- * Return: a duplicate of arr
+ * arrdup - duplicate a (NULL-terminated) []
+ * @arr: [] to duplicate
+ * Return: a duplicate of @arr
  */
+
 char **arrdup(char **arr)
 {
 	char **dup = NULL;
@@ -22,4 +22,3 @@ char **arrdup(char **arr)
 		dup[len] = _strdup(arr[len]);
 	return (dup);
 }
-
