@@ -9,4 +9,4 @@ typedef struct history history_t;
 typedef struct info info_t;
 typedef struct list list_t;
 
-#endif /* _TYPES_H_ */
+#endif
