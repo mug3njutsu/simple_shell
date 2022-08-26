@@ -1,15 +1,13 @@
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-
+#include "main.h"
 #include "info.h"
 
 /**
  * init_info - initialize shell info
  * @argc: the arg count
  * @argv: the arg values
- * Return: pointer to the info
+ * Return: *p -> info
  */
+
 info_t *init_info(int argc, char **argv)
 {
 	static info_t info;
@@ -38,12 +36,12 @@ info_t *init_info(int argc, char **argv)
 	return (&info);
 }
 
-
 /**
  * free_info - free and nullify dynamically allocated info
- * @info: pointer to the info
+ * @info: *p -> info
  * Return: current exit status
  */
+
 int free_info(info_t *info)
 {
 	free(info->line);
