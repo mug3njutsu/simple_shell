@@ -1,10 +1,11 @@
 #include "quote.h"
 
 /**
- * _isspecial_double - check if a character is special inside double quotes
- * @c: the character to check
- * Return: If c is special, return 1. Otherwise, return 0.
+ * _isspecial_double - check if char is special inside double quotes
+ * @c: char to check
+ * Return: 0 || 1
  */
+
 int _isspecial_double(char c)
 {
 	return (c == '"' || c == '$' || c == '\\');
