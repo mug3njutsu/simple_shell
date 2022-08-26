@@ -1,7 +1,7 @@
 #ifndef TOKENS_H
 #define TOKENS_H
 
-#include <stdlib.h>
+#include "main.h"
 #include "quote.h"
 #include "string.h"
 
@@ -17,4 +17,4 @@ char **arrdup(char **arr);
 
 char **arrjoin(char **arr1, char **arr2);
 
-#endif /* TOKENS_H */
+#endif
