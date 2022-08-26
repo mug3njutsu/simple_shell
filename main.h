@@ -13,5 +13,6 @@
 #include <signal.h>
 #include <errno.h>
 #include <fcntl.h>
+#include <stdbool.h>
 
 #endif
