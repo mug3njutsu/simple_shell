@@ -2,12 +2,10 @@
 
 /**
  * parse - parse input
- * @info: shell information
- *
- * Description: This function expands aliases, variables, and word splitting
- *
+ * @info: shell info
  * Return: the final number of tokens
  */
+
 int parse(info_t *info)
 {
 	char **tokens, *tok;
