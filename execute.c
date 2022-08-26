@@ -2,10 +2,10 @@
 
 /**
   * execute - execute a command
-  * @info: arguments passed
-  *
+  * @info: args passed
   * Return: status
   */
+
 int execute(info_t *info)
 {
 	const builtin_t *builtin = get_builtin(*info->tokens);
@@ -43,13 +43,12 @@ int execute(info_t *info)
 	return (info->status);
 }
 
-
 /**
  * _execute - fork and exec the current command
- * @info: shell information
- *
+ * @info: shell info
  * Return: exit status of the child process
  */
+
 int _execute(info_t *info)
 {
 	char *exe, **argv, **env;
