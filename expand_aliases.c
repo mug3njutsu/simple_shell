@@ -3,10 +3,10 @@
 /**
  * expand_aliases - perform recursive alias expansion on the current command
  * @aliases: alias list
- * @tokptr: pointer to the current tokens
- *
- * Return: If expansion succeeds, return a pointer t to the otherwise 0
+ * @tokptr: *p -> current tokens
+ * Return: 0 || 1
  */
+
 void expand_aliases(alias_t *aliases, char ***tokptr)
 {
 	char **new, **old, *name, *value, *temp;
@@ -34,15 +34,13 @@ void expand_aliases(alias_t *aliases, char ***tokptr)
 	} while (name && **tokptr && _strcmp(name, **tokptr));
 }
 
-
 /**
  * expand_alias - perform a single alias expansion on the current command
  * @aliases: alias list
- * @tokptr: pointer to the current tokens
- *
- * Return: If expansion succeeds, return a pointer the alias name.
- * Otherwise, return NULL.
+ * @tokptr: *p -> current tokens
+ * Return: NULL || *p -> alias name
  */
+
 char *expand_alias(alias_t *aliases, char ***tokptr)
 {
 	char **alias_tokens, **tokens = *tokptr;
