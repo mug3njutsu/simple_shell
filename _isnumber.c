@@ -1,10 +1,11 @@
 #include "ctype.h"
 
 /**
-  * _isnumber - check if a string consists only of digits
-  * @s: pointer to string
-  * Return: true or false
+  * _isnumber - check if a str consists only of digits
+  * @s: *p -> string
+  * Return: true || false
   */
+
 bool _isnumber(const char *s)
 {
 	if (s)
