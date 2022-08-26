@@ -1,10 +1,11 @@
 #include "builtins.h"
 
 /**
-  * __unsetenv - unsets the environment variable
-  * @info: arguments passed
+  * __unsetenv - unsets the env variable
+  * @info: args passed
   * Return: status
   */
+
 int __unsetenv(info_t *info)
 {
 	char **args = info->tokens + 1;
