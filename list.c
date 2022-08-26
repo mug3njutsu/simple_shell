@@ -1,11 +1,12 @@
 #include "list.h"
 
 /**
- * str_to_list - turn a string into a linked list
- * @str: string passed
+ * str_to_list - turn a str into a linked list
+ * @str: str passed
  * @delim: delimiter passed
- * Return: pointer to list
+ * Return: *p -> list
  */
+
 list_t *str_to_list(const char *str, char delim)
 {
 	list_t *head = NULL;
@@ -19,15 +20,14 @@ list_t *str_to_list(const char *str, char delim)
 	return (head);
 }
 
-
 /**
- * _str_to_list - turn a string into a linked list (helper)
- * @tailptr: pointer to the tail of the list
- * @str: string
+ * _str_to_list - turn a str into a linked list
+ * @tailptr: *p -> tail of the list
+ * @str: str
  * @delim: delimiter
- *
- * Return: pointer to the tail of the list
+ * Return: *p -> tail of the list
  */
+
 list_t *_str_to_list(list_t **tailptr, const char *str, char delim)
 {
 	list_t *tail;
@@ -52,14 +52,13 @@ list_t *_str_to_list(list_t **tailptr, const char *str, char delim)
 	return (tail);
 }
 
-
 /**
- * add_node - insert a string at the beginning of the list
- * @headptr: a pointer to the address of the first list node
- * @str: the string to add to the list
- * Return: If memory allocation fails, return NULL. Otherwise, return the
- * address of the new no
+ * add_node - insert a str at the beginning of the list
+ * @headptr: *p -> &first_list_node
+ * @str: str to add to the list
+ * Return: NULL || &new_no
  */
+
 list_t *add_node(list_t **headptr, const char *str)
 {
 	list_t *new;
@@ -79,14 +78,13 @@ list_t *add_node(list_t **headptr, const char *str)
 	return (new);
 }
 
-
 /**
- * add_node_end - add a string at the end of the list
- * @headptr: a pointer to the address of the first list node
- * @str: the string to add to the list
- * Return: If memory allocation fails, return NULL. Otherwise, return the
- * address of the new no
+ * add_node_end - add str at the end of the list
+ * @headptr: *p -> &first_list_node
+ * @str: str to add to the list
+ * Return: NULL || &new_no
  */
+
 list_t *add_node_end(list_t **headptr, const char *str)
 {
 	list_t *new;
@@ -109,11 +107,11 @@ list_t *add_node_end(list_t **headptr, const char *str)
 	return (new);
 }
 
-
 /**
- * free_list - free a linked list and and set head to NULL
- * @headptr: the first list node
+ * free_list - free a linked list and set head to NULL
+ * @headptr: first list node
  */
+
 void free_list(list_t **headptr)
 {
 	if (!*headptr)
