@@ -1,19 +1,20 @@
 #ifndef _COMMAND_H_
 #define _COMMAND_H_
 
-#include <stdlib.h>
+#include "main.h"
 #include "quote.h"
 #include "string.h"
 #include "tokens.h"
 #include "types.h"
 
 /**
- * enum cmdlist_sep_n - numeric values for commmand list separators
+ * enum cmdlist_sep_n - numeric vals for commmand list separators
  * @SEMICOLON: ;
  * @AMPERSAND: &
  * @AND: &&
  * @OR: ||
  */
+
 typedef enum cmdlist_sep_n
 {
 	SEMICOLON = 1,
@@ -25,8 +26,9 @@ typedef enum cmdlist_sep_n
 /**
  * struct cmdlist_sep - command list separator structure
  * @sep: the command separator
- * @n: the corresponding numeric value
+ * @n: the corresponding numeric val
  */
+
 typedef struct cmdlist_sep
 {
 	const char *sep;
@@ -39,6 +41,7 @@ typedef struct cmdlist_sep
  * @tree: a binary tree of commands
  * @tokens: the tokens for each command in the tree
  */
+
 struct cmdlist
 {
 	struct cmdlist *next;
@@ -53,6 +56,7 @@ struct cmdlist
  * @tokens: a simple command with no separators
  * @sep: the preceding list separator
  */
+
 struct cmdtree
 {
 	struct cmdtree *success;
@@ -74,4 +78,4 @@ void free_cmdlist(cmdlist_t **headptr);
 cmdtree_t *cmd_to_tree(const char * const *tokens);
 void free_cmdtree(cmdtree_t **rootptr);
 
-#endif /* _COMMAND_H_ */
+#endif
