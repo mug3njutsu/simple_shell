@@ -1,11 +1,11 @@
 #include "tokens.h"
 
 /**
- * tokenize - split a string into words (tokens) and dequote
- * @str: the string to tokenize
- * Return: If malloc fails or if str is 0 or contains no tokens, return NULL.
- * Otherwise, return an array containing the tokens in str, terminated by NULL.
+ * tokenize - split a str into words (tokens) and dequote
+ * @str: the str to tokenize
+ * Return: NULL
  */
+
 char **tokenize(const char *str)
 {
 	char **tokens;
@@ -48,12 +48,12 @@ char **tokenize(const char *str)
 	return (tokens);
 }
 
-
 /**
- * count_tokens - compute the length of a string after dequoting
- * @str: the string to evaluate
- * Return: Return the length of str after dequoting
+ * count_tokens - compute the len(str) after dequoting
+ * @str: the str to eval
+ * Return: len(str) after dequoting
  */
+
 size_t count_tokens(const char *str)
 {
 	size_t count;
@@ -75,13 +75,12 @@ size_t count_tokens(const char *str)
 	return (count);
 }
 
-
 /**
- * tokenize_noquote - split a string into words (tokens)
- * @str: the string to tokenize
- * Return: If malloc fails or if str is 0 or contains no tokens, return NULL.
- * Otherwise, return an array containing the tokens in str, terminated by NULL.
+ * tokenize_noquote - split a str into words (tokens)
+ * @str: the str to tokenize
+ * Return: NULL
  */
+
 char **tokenize_noquote(const char *str)
 {
 	char **tokens;
@@ -122,11 +121,11 @@ char **tokenize_noquote(const char *str)
 
 
 /**
- * count_tokens_noquote - count the words in a string
- * @str: the string to evaluate
- * Return: If str is NULL, return -1.
- * Otherwise, return the number of words in str.
+ * count_tokens_noquote - count the words in a str
+ * @str: str to evaluate
+ * Return: -1 || n words in str
  */
+
 size_t count_tokens_noquote(const char *str)
 {
 	size_t tok_count;
@@ -144,11 +143,11 @@ size_t count_tokens_noquote(const char *str)
 	return (tok_count);
 }
 
-
 /**
- * free_tokens - free & nullify an array of strings
- * @tokens: pointer to an array of tokens
+ * free_tokens - free & nullify an array of strs
+ * @tokens: *p -> [] of tokens
  */
+
 void free_tokens(char ***tokens)
 {
 	char **tok;
