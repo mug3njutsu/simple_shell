@@ -2,10 +2,11 @@
 
 /**
  * __alias_add - add an alias to a list of aliases
- * @aliases: a pointer to a list of aliases
- * @name: the name of the alias
- * @value: the value of the alias
+ * @aliases: *p -> list of aliases
+ * @name: name of the alias
+ * @value: value of the alias
  */
+
 void __alias_add(alias_t **aliases, const char *name, const char *value)
 {
 	alias_t *alias = get_dict_node(aliases ? *aliases : NULL, name);
@@ -21,11 +22,11 @@ void __alias_add(alias_t **aliases, const char *name, const char *value)
 	}
 }
 
-
 /**
- * __alias_print - print an alias
+ * __alias_print - print alias
  * @alias: the alias to print
  */
+
 void __alias_print(alias_t *alias)
 {
 	write(STDOUT_FILENO, alias->key, _strlen(alias->key));
@@ -34,13 +35,12 @@ void __alias_print(alias_t *alias)
 	write(STDOUT_FILENO, "'\n", 2);
 }
 
-
 /**
  * __alias - create and display aliases
  * @info: shell info struct
- *
  * Return: status
  */
+
 int __alias(info_t *info)
 {
 	alias_t *alias;
