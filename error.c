@@ -5,6 +5,7 @@
   * @msg: error message
   * @...: NULL-terminated list of context strings to prepend
   */
+
 void perrorl(const char *msg, ...)
 {
 	const char *str;
@@ -23,14 +24,14 @@ void perrorl(const char *msg, ...)
 	write(STDERR_FILENO, "\n", 1);
 }
 
-
 /**
-  * perrorl_default - print a formatted message to standard error
-  * @arg0: argument vector
+  * perrorl_default - print a formatted message to stderr
+  * @arg0: arg vector
   * @lineno: line number
   * @msg: error message
-  * @...: NULL-terminated list of context strings to prepend
+  * @...: NULL-terminated list of context strs to prepend
   */
+
 void perrorl_default(const char *arg0, size_t lineno, const char *msg, ...)
 {
 	char *linenostr = num_to_str(lineno);
