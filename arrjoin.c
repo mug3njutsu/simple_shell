@@ -2,11 +2,11 @@
 
 /**
  * arrjoin - join two arrays
- * @arr1: the first array
- * @arr2: the second array
- *
- * Return: a dynamically-allocated array of the elements from arr1 and arr2
+ * @arr1: first []
+ * @arr2: second []
+ * Return: a dynamically-allocated [] of the elements from @arr1 & @arr2
  */
+
 char **arrjoin(char **arr1, char **arr2)
 {
 	char **new;
