@@ -1,14 +1,12 @@
 #include "command.h"
 
-
 /**
- * add_cmd_end - add a command at the end of the list
- * @headptr: a pointer to the address of the first list node
- * @cmd: the cmd to add to the list
- *
- * Return: If memory allocation fails, return NULL. Otherwise, return the
- * address of the new node.
+ * add_cmd_end - add to the end of the list
+ * @headptr: *p -> &first_line_node
+ * @cmd: cmd to add to the list
+ * Return: NULL || &new_node
  */
+
 cmdlist_t *add_cmd_end(cmdlist_t **headptr, const char *cmd)
 {
 	cmdlist_t *new;
@@ -36,13 +34,13 @@ cmdlist_t *add_cmd_end(cmdlist_t **headptr, const char *cmd)
 	return (new);
 }
 
-
 /**
- * del_cmd - remove a command from a command list
- * @headptr: the first node
- * @index: argument passed
- * Return: address of deleted node
+ * del_cmd - remove command from a command list
+ * @headptr: first node
+ * @index: arg passed
+ * Return: &deleted_node
  */
+
 cmdlist_t *del_cmd(cmdlist_t **headptr, size_t index)
 {
 	cmdlist_t *old;
@@ -61,12 +59,12 @@ cmdlist_t *del_cmd(cmdlist_t **headptr, size_t index)
 	return (old);
 }
 
-
 /**
  * pop_cmd - remove a node and retrieve it's tokens
- * @headptr: the first node
+ * @headptr: first node
  * Return: command tokens
  */
+
 char **pop_cmd(cmdlist_t **headptr)
 {
 	cmdlist_t *pop;
@@ -85,11 +83,11 @@ char **pop_cmd(cmdlist_t **headptr)
 	return (tokens);
 }
 
-
 /**
- * free_cmdlist - free a linked list and and set head to NULL
- * @headptr: the first node
+ * free_cmdlist - free(linked list) and set head to NULL
+ * @headptr: first node
  */
+
 void free_cmdlist(cmdlist_t **headptr)
 {
 	if (headptr && *headptr)
