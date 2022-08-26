@@ -2,10 +2,11 @@
 
 /**
   * search_path - searches for the directory with the executable program
-  * @info: argument passed
-  * @path: argument passed
-  * Return: pointer to directory string
+  * @info: arg passed
+  * @path: arg passed
+  * Return: *p -> directory str
   */
+
 char *search_path(info_t *info, list_t *path)
 {
 	char *pathname, *command = *info->tokens;
