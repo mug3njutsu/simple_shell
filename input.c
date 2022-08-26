@@ -3,16 +3,16 @@
 
 /**
  * read_input - get input
- * @info: shell information
- *
+ * @info: shell info
  * Return: line size
  */
+
 bool read_input(info_t *info)
 {
 	char *line = NULL, *temp = NULL;
 
 	if (info->interactive)
-		write(STDERR_FILENO, "$ ", 2);
+		write(STDERR_FILENO, "l33tsh3ll$ ", 11);
 
 	info->lineno += 1;
 	while (_read_input(&info->line, info->fileno) &
@@ -36,14 +36,13 @@ bool read_input(info_t *info)
 	return (info->line);
 }
 
-
 /**
  * _read_input - read a single line
- * @lineptr: line buffer
+ * @lineptr: line buf
  * @fd: file descriptor to read from
- *
  * Return: ending quote state
  */
+
 quote_state_t _read_input(char **lineptr, int fd)
 {
 	char *line = *lineptr = _getline(fd);
