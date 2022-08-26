@@ -1,9 +1,10 @@
 #include "builtins.h"
 
 /**
- * get_builtins - get the builtins
- * Return: pointer to a NULL-terminated statically-allocated array of builtins
+ * get_builtins - get builtins
+ * Return: *p -> NULL-terminated statically-allocated [] of builtins
  */
+
 const builtin_t *get_builtins(void)
 {
 	static builtin_t builtins[] = {
@@ -22,10 +23,11 @@ const builtin_t *get_builtins(void)
 }
 
 /**
- * get_builtin - get a builtin by name
- * @name: the name of the builtin to retrieve
- * Return: NULL if no match is found, otherwise a pointer to the builtin
+ * get_builtin - get builtin by name
+ * @name: name of the builtin to retrieve
+ * Return: NULL || otherwise *p -> builtin
  */
+
 const builtin_t *get_builtin(const char *name)
 {
 	const builtin_t *builtin = NULL;
