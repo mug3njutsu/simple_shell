@@ -1,11 +1,11 @@
 #include "quote.h"
 
 /**
- * dequote - dequote a string
- * @str: the string to dequote
- * Return: If memory allocation fails, return NULL.
- * Otherwise return a dequoted copy of str.
+ * dequote - dequote str
+ * @str: str to dequote
+ * Return: NULL || dequoted copy of str
  */
+
 char *dequote(const char *str)
 {
 	char *new;
@@ -50,12 +50,12 @@ char *dequote(const char *str)
 	return (new);
 }
 
-
 /**
- * dequote_len - compute the length of a string after dequoting
- * @str: the string to evaluate
- * Return: Return the length of str after dequoting
+ * dequote_len - compute the len(str) after dequoting
+ * @str: str to eval
+ * Return: Return the len(str) after dequoting
  */
+
 size_t dequote_len(const char *str)
 {
 	size_t len = 0, state_len;
