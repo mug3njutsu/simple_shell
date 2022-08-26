@@ -1,8 +1,7 @@
 #ifndef _CTYPE_H_
 #define _CTYPE_H_
 
-#include <stdbool.h>
-#include <stdlib.h>
+#include "main.h"
 
 bool _isalnum(int c);
 bool _isalpha(int c);
@@ -13,4 +12,4 @@ bool _isquote(int c);
 
 bool _isnumber(const char *s);
 
-#endif /* _CTYPE_H_ */
+#endif
