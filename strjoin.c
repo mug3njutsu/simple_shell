@@ -1,13 +1,14 @@
 #include "string.h"
 
 /**
- * strjoin - joins two strings with another string
- * @n: address at which to store the size of the new string
- * @sep: joining string
- * @pre: prefix string
- * @suf: suffix string
- * Return: pointer to the new string
+ * strjoin - joins two strs with another str
+ * @n: address at which to store the sizeof(new string)
+ * @sep: joining str
+ * @pre: prefix str
+ * @suf: suffix str
+ * Return: *p -> new string
  */
+
 char *strjoin(size_t *n, const char *sep, const char *pre, const char *suf)
 {
 	char *dest = NULL;
@@ -27,14 +28,14 @@ char *strjoin(size_t *n, const char *sep, const char *pre, const char *suf)
 	return (dest);
 }
 
-
 /**
- * strjoina - join strings from a NULL-terminated array
- * @n: address at which to store the length of the new string
- * @sep: joining string
- * @array: array of strings
- * Return: pointer to the new string
+ * strjoina - join strs from a NULL-terminated []
+ * @n: address at which to store the length of the new str
+ * @sep: joining str
+ * @array: array of strs
+ * Return: *p -> new string
  */
+
 char *strjoina(size_t *n, const char *sep, const char **array)
 {
 	char *dest = NULL;
@@ -66,14 +67,14 @@ char *strjoina(size_t *n, const char *sep, const char **array)
 	return (dest);
 }
 
-
 /**
- * strjoinl - joins a NULL terminated list of strings with a character
- * @n: address at which to store the length of the new string
- * @sep: joining string
- * @...: strings
- * Return: pointer to the new string
+ * strjoinl - joins a NULL terminated list of strs with a char
+ * @n: address at which to store the len(new str)
+ * @sep: joining str
+ * @...: strs
+ * Return: *p -> new string
  */
+
 char *strjoinl(size_t *n, const char *sep, ...)
 {
 	char *dest = NULL;
