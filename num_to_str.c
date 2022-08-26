@@ -1,10 +1,11 @@
 #include "string.h"
 
 /**
- * _num_to_str - converts number to string
- * @buf: string
+ * _num_to_str - converts number to str
+ * @buf: str
  * @n: number passed
  */
+
 static void _num_to_str(char **buf, size_t n)
 {
 	if (n > 9)
@@ -15,10 +16,11 @@ static void _num_to_str(char **buf, size_t n)
 }
 
 /**
- * num_to_str - converts number to string
+ * num_to_str - converts number to str
  * @n: number passed
- * Return: pointer to string
+ * Return: *p -> str
  */
+
 char *num_to_str(size_t n)
 {
 	size_t tmp = n, len = 1;
