@@ -1,9 +1,7 @@
 #ifndef _GETLINE_H_
 #define _GETLINE_H_
 
-#include <stdlib.h>
-#include <unistd.h>
-
+#include "main.h"
 #include "string.h"
 
 #define GETLINE_BUFFER_SIZE 4096
@@ -11,9 +9,10 @@
 /**
  * struct buf_s - input buffer
  * @buffer: the buffer
- * @next: pointer to the next value
- * @remaining: number of values remaining
+ * @next: *p -> next value
+ * @remaining: number of vals remaining
  */
+
 typedef struct buf_s
 {
 	char buffer[GETLINE_BUFFER_SIZE];
@@ -29,6 +28,7 @@ typedef struct buf_s
  * @buf: associated buffer
  * @next: next buffer in chain
  */
+
 typedef struct buf_table_node_s
 {
 	int fd;
@@ -40,4 +40,4 @@ typedef buf_table_node_t *buf_table_t[GETLINE_TABLE_SIZE];
 
 char *_getline(const int fd);
 
-#endif /* _GETLINE_H_ */
+#endif
