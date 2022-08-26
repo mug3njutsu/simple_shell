@@ -1,9 +1,7 @@
 #ifndef _INFO_H_
 #define _INFO_H_
 
-#include <stdlib.h>
-#include <unistd.h>
-
+#include "main.h"
 #include "alias.h"
 #include "command.h"
 #include "env.h"
@@ -19,24 +17,25 @@ extern char **environ;
 
 /**
   * struct info - shell state
-  * @interactive: arguments passed
-  * @argc: arguments passed
-  * @argv: arguments passed
-  * @file: arguments passed
-  * @fileno: arguments passed
-  * @status: arguments passed
-  * @line: arguments passed
-  * @lineno: arguments passed
-  * @tokens: arguments passed
-  * @pid: arguments passed
-  * @cwd: arguments passed
-  * @exe: arguments passed
-  * @env: arguments passed
-  * @path: arguments passed
-  * @aliases: arguments passed
-  * @history: arguments passed
-  * @commands: arguments passed
+  * @interactive: args passed
+  * @argc: args passed
+  * @argv: args passed
+  * @file: args passed
+  * @fileno: args passed
+  * @status: args passed
+  * @line: args passed
+  * @lineno: args passed
+  * @tokens: args passed
+  * @pid: args passed
+  * @cwd: args passed
+  * @exe: args passed
+  * @env: args passed
+  * @path: args passed
+  * @aliases: args passed
+  * @history: args passed
+  * @commands: args passed
   */
+
 struct info
 {
 	int interactive;
@@ -61,4 +60,4 @@ struct info
 info_t *init_info(int argc, char **argv);
 int free_info(info_t *info);
 
-#endif /* _INFO_H_ */
+#endif
