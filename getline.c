@@ -2,13 +2,13 @@
 #include "string.h"
 
 /**
- * _realloc - reallocate a buffer
- * @old: pointer to the buffer
- * @old_size: current size of the buffer
- * @new_size: desired size of the buffer
- * Return: If memory allocation fails, return NULL.
- * Otherwise, return a pointer to the new buffer.
+ * _realloc - reallocate buf
+ * @old: *p -> buf
+ * @old_size: current sizeof(buf)
+ * @new_size: desired sizeof(buf)
+ * Return: NULL || *p -> new buf
  */
+
 static void *_realloc(void *old, size_t old_size, size_t new_size)
 {
 	void *new = NULL;
@@ -34,13 +34,13 @@ static void *_realloc(void *old, size_t old_size, size_t new_size)
 
 /**
  * _getline_next - read a line of input
- * @buf: pointer to the static buffer
- * @line: address of a pointer to the line
- * @size: address of a pointer to the line size
- * @n: number of characters to copy from the buffer
- * Return: If memory allocation fails, return NULL.
- * Otherwise, return a pointer to the line of input.
+ * @buf: *p -> static buffer
+ * @line: address of *p -> line
+ * @size: address of *p -> line size
+ * @n: number of chars to copy from buf
+ * Return: NULL || *p -> line of input
  */
+
 static char *_getline_next(buf_t *buf, char **line, size_t *size, size_t n)
 {
 	char *temp = NULL;
@@ -73,11 +73,12 @@ static char *_getline_next(buf_t *buf, char **line, size_t *size, size_t n)
 }
 
 /**
- * _getline_buf - create, get, and delete buffers
+ * _getline_buf - create, get and delete buffers
  * @table: buffers indexed by file descriptor
  * @fd: file descriptor
- * Return: NULL or a pointer to the buffer associated with fd
+ * Return: NULL || *p -> buf associated with @fd
  */
+
 static buf_t *_getline_buf(buf_table_t *table, const int fd)
 {
 	buf_table_node_t *item = NULL;
@@ -119,11 +120,11 @@ static buf_t *_getline_buf(buf_table_t *table, const int fd)
 }
 
 /**
- * _getline - read a line of input
- * @fd: file descriptor from which to read
- * Return: If an error occurs or there are no more lines, return NULL.
- * Otherwise, return the next line of input.
+ * _getline - read line of input
+ * @fd: file descriptor to read
+ * Return: NULL || next line of input
  */
+
 char *_getline(const int fd)
 {
 	static buf_table_t table;
