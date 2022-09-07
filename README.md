@@ -42,10 +42,14 @@ cmdtree.c      __exit.c          _isalpha.c   path.c               tokens.c
 command.h      expand_aliases.c  _isdigit.c   path.h               tokens.h
 ctype.h        expand_vars.c     _isident.c   _quote.c             types.h
 dequote.c      getline.c         _isnumber.c  quote.c              __unsetenv.c
+```
+```bash
 ➜  simple_shell git:(main) ✗ ./hsh 
 l33tsh3ll$ exit 98
 ➜  simple_shell git:(main) ✗ echo $?
 98
+```
+```bash
 ➜  simple_shell git:(main) ✗ ./hsh 
 l33tsh3ll$ ls /var;ls /var
 backups  cache  games  lib  local  lock  log  mail  opt  run  spool  tmp  www
@@ -58,6 +62,8 @@ backups  cache  games  lib  local  lock  log  mail  opt  run  spool  tmp  www
 ls: cannot access '/hbtn': No such file or directory
 backups  cache  games  lib  local  lock  log  mail  opt  run  spool  tmp  www
 backups  cache  games  lib  local  lock  log  mail  opt  run  spool  tmp  www
+```
+```bash
 ➜  simple_shell git:(main) ✗ ./hsh 
 l33tsh3ll$ ls /var
 backups  cache  games  lib  local  lock  log  mail  opt  run  spool  tmp  www
@@ -67,6 +73,8 @@ l33tsh3ll$ echo $$
 6434
 l33tsh3ll$ echo $PATH
 /home/mug3njutsu/.poetry/bin:/home/mug3njutsu/.rbenv/plugins/ruby-build/bin:/home/mug3njutsu/.rbenv/shims:/home/mug3njutsu/.rbenv/bin:/home/mug3njutsu/.rbenv/shims:/home/mug3njutsu/.rbenv/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/mug3njutsu/.dotnet/tools:/usr/lib/postgresql/10/bin:/home/mug3njutsu/.cargo/bin/
+```
+```bash
 ➜  simple_shell git:(main) ✗ ./hsh 
 l33tsh3ll$ echo $$ # ls -la
 6605
